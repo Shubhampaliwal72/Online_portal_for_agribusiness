@@ -1,0 +1,219 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 250px;
+    background-color: #2E8B57;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.profile button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #fff;
+    color: #2E8B57;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    margin: 15px 0;
+}
+
+nav ul li button {
+    width: 100%;
+    padding: 10px;
+    background-color: #3CB371;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: left;
+}
+
+nav ul li button:hover {
+    background-color: #66CDAA;
+}
+
+/* Main content styling */
+.main-content {
+    flex: 1;
+    padding: 30px;
+    background-color: #F5F5F5;
+    overflow-y: auto;
+}
+
+.section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.section h2 {
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+}
+
+form button {
+    padding: 10px 15px;
+    background-color: #2E8B57;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background-color: #3CB371;
+}
+
+/* Products List */
+#productsList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product-card {
+    background-color: #FAFAFA;
+    padding: 15px;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    width: calc(33% - 40px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.product-card h3 {
+    margin: 10px 0;
+}
+
+.product-card p {
+    margin-bottom: 10px;
+}
+
+.product-card button {
+    padding: 5px 10px;
+    background-color: #DC143C;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.product-card button:hover {
+    background-color: #FF6347;
+}
+
+/* Modal Styling */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right:0;
+    bottom:0;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.modal-content button {
+    margin: 10px;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#confirmLogout {
+    background-color: #DC143C;
+    color: white;
+}
+
+#cancelLogout {
+    background-color: #A9A9A9;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product-card {
+        width: calc(50% - 40px);
+    }
+}
+
+@media (max-width: 500px) {
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    nav ul {
+        display: flex;
+        gap: 10px;
+    }
+
+    .product-card {
+        width: 100%;
+    }
+}

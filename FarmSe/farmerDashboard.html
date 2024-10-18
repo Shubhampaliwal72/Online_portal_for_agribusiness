@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Dashboard</title>
+    <link rel="stylesheet" href="farmerDashboard.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="profile">
+            <img src="https://via.placeholder.com/100" alt="Farmer Image" id="profileImage">
+            <input type="file" id="imageUpload" accept="image/*" style="display: none;">
+            <button id="editImageBtn">Edit Image</button>
+        </div>
+        <nav>
+            <ul>
+                <li><button id="addProductBtn">Products</button></li>
+                <!-- <li><button id="editProductBtn">Edit Products</button></li> -->
+                <li><button id="orderSectionBtn">Orders</button></li>
+                <li><button id="logoutBtn">Logout</button></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <!-- Add Product Section
+        <section id="addProductSection" class="section">
+            <h2>Add New Product</h2>
+            <form id="addProductForm">
+                <label for="productName">Product Name:</label>
+                <input type="text" id="productName" required>
+
+                <label for="productImage">Product Image:</label>
+                <input type="file" id="productImage" accept="image/*" required>
+
+                <label for="productPrice">Price:</label>
+                <input type="number" id="productPrice" required>
+
+                <button type="submit">Add Product</button>
+            </form>
+        </section> -->
+
+        <!-- Edit Products Section -->
+        <section id="editProductSection" class="section" style="display: none;">
+            <h2>Edit Products</h2>
+            <div id="productsList">
+                <!-- Products will be dynamically added here -->
+            </div>
+        </section>
+
+        <!-- Orders Section -->
+        <section id="orderSection" class="section" style="display: none;">
+            <h2>Orders</h2>
+            <div id="ordersList">
+                <!-- Orders will be dynamically added here -->
+                <p>No orders yet.</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Logout Confirmation Modal -->
+    <div id="logoutModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Are you sure you want to logout?</p>
+            <button id="confirmLogout">Yes, Logout</button>
+            <button id="cancelLogout">Cancel</button>
+        </div>
+    </div>
+
+    <script src="farmerDashboard.js"></script>
+</body>
+</html>
